@@ -40,7 +40,7 @@ function generateCityList(){
 
     $("#cities").empty();
     cityArr.forEach((item) => {
-        let li = $("<li>").attr({"class": "list-group-item", "id": item}).text(item);
+        let li = $("<li>").attr({"class": "list-group-item list-link font-weight-bold", "id": item}).text(item);
         $("#cities").prepend(li);
     })
 
@@ -122,7 +122,7 @@ function createFiveDay(response) {
         let containerEl = $("<div>").attr("class", "futureDay card");
         let cardContainerEL = $("<div>").attr("class", "card-body");
         let iconEl = $("<img>").attr({"src": iconurl, "alt": "weather image"});
-        let dowDiv = $("<div>").text(day.format("dddd")).attr({"class": "font-weight-bold"});
+        let dowDiv = $("<div>").text(day.format("dddd")).attr({"class": "font-weight-bold dow"});
         let dateDiv = $("<div>").text(day.format("L"));
         let tempDiv = $("<div>").text("Temp " + response.list[i].main.temp + " (F)");
         let humidityDiv = $("<div>").text("Humidity: " + response.list[i].main.humidity + "%");

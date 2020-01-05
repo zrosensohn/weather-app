@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
-    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+        <link rel="stylesheet" href="style.css">
+    </head>
+
     <body class="d-flex flex-column h-100">
 
-        <header class="bg-light">
-            <div class="container py-3 text-center"><h3>Weather Dashboard</h3></div>
+        <header>
+            <div class="container py-3 text-center"><h2><i class="fas fa-cloud-sun"></i> Weather Dashboard</h3></div>
         </header><!--End Main-->
 
         <main class="flex-grow-1 mt-3">
@@ -23,11 +25,11 @@
                     
                     <div class="input-group mb-2 mr-sm-2">
                         <input type="text" class="form-control" id="cityInput" placeholder="city">
-                        <button id="newCity" class="btn btn-primary">@</button>
+                        <button id="newCity" class="btn search-btn"><i class="fas fa-search"></i></button>
                     </div>
 
                     <ul class="list-group" id="cities">
-                        <!-- <li class="list-group-item">Cras justo odio</li> -->
+
                     </ul>
 
 
@@ -47,7 +49,6 @@
 
                     <h4 id="fiveDayH4" class="mt-3"></h4>
                     <div id="fiveDay" class="d-flex justify-content-between mt-2">
-
                     </div><!--End Five Day-->
 
                 </section> <!--End Section-->
@@ -55,8 +56,8 @@
             </div><!--End Main Container-->
         </main><!--End Main-->
 
-        <footer class="mt-3 bg-dark">
-            <div class="container text-center">Footer</div>
+        <footer class="mt-3">
+            <div class="container text-center">Zachary Rosensohn</div>
         </footer>
         
         
@@ -65,6 +66,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/490a5cd13f.js" crossorigin="anonymous"></script>
         <script src="moment.js"></script>
         <script src="script.js"></script>
     </body>

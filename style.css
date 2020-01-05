@@ -1,0 +1,26 @@
+.list-link:hover, .search-btn {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #b1d7ff;
+}
+
+h3,h4,h5, #cities li, .dow{
+    color: #365577;
+}
+
+header {
+    background-color: #365577;
+    color: #fff;
+    border-bottom: #e3d3c2 5px solid;
+}
+
+footer {
+    background-color: #c0c0c0;
+    color: #365577;
+    font-weight: lighter;
+}
