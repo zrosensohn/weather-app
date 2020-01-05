@@ -8,7 +8,7 @@ if ("geolocation" in navigator) {
         console.log(position.coords.latitude, position.coords.longitude);
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
-        let queryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + apiKey;
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + apiKey;
         
         $.ajax({
             url: queryURL,
@@ -69,7 +69,7 @@ function getStorage() {
 // fires five day forcast function
 function runAJAX(city) {
     $.ajax({
-      url: "http://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" + city + ",us&APPID=" + apiKey,
+      url: "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" + city + ",us&APPID=" + apiKey,
       method: "GET",
       success: function(response){
         
@@ -95,12 +95,12 @@ function runAJAX(city) {
 function currentWeater(city) {
     
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + city + ",us&APPID=" + apiKey,
+        url: "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + city + ",us&APPID=" + apiKey,
         method: "GET"
     }).then((response) => {
         let currentDate = moment().format("dddd[, ] MMMM Do[, ] YYYY");
         let iconcode = response.weather[0].icon;
-        let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        let iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     
         $("#currentWeaterCard").attr("class", "card");
         $("#selectedCity").text(response.name + " (" + currentDate + ")" );
@@ -124,7 +124,7 @@ function createFiveDay(response) {
     for(i=0 ; i<response.list.length; i+=8) {
         console.log(i);
         let iconcode = response.list[i].weather[0].icon;
-        let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        let iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
         let day = moment(response.list[i].dt_txt);
         
         let containerEl = $("<div>").attr("class", "futureDay card");
