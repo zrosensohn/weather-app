@@ -1,15 +1,32 @@
-// if ("geolocation" in navigator) {
-//     /* geolocation is available */
+if ("geolocation" in navigator) {
+    /* geolocation is available */
 
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//         console.log(position);
-//         //position.coords.latitude, position.coords.longitude
-//       });
+    navigator.geolocation.getCurrentPosition(function(position) {
+    
+        console.log(position.coords.latitude, position.coords.longitude);
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+        let queryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + apiKey;
+        
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            success: (response) => {
+                console.log(response);
+                let city = response.name.toUpperCase();
+                runAJAX(city);
+            },
+            error: (xhr) => {
+                alert("Error code: " + xhr.response);
+            }
+        })
+    
+    });
 
-//   } else {
-//     /* geolocation IS NOT available */
-//     console.log("no local");
-//   }
+  } else {
+    /* geolocation IS NOT available */
+    console.log("no local");
+  }
 
 //set city array to empty and api key
 var cityArr = [];
