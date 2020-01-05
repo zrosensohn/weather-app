@@ -1,3 +1,5 @@
+//Geo local check. If coordiantes can be retrieved use them to make ajax call using new parameters
+//fire runAJAX function with city name from the response as an argument
 if ("geolocation" in navigator) {
     /* geolocation is available */
 
@@ -62,6 +64,9 @@ function getStorage() {
     }
 };
 
+// make api call for 5 day forecast, on success adds new city to array, pushes to array, generates list
+// fires current weather function
+// fires five day forcast function
 function runAJAX(city) {
     $.ajax({
       url: "http://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" + city + ",us&APPID=" + apiKey,
@@ -86,6 +91,7 @@ function runAJAX(city) {
     })
 };
 
+// make api call for 1 day forcast, fills in HTML elements with relavent data, adds title to five day forcast
 function currentWeater(city) {
     
     $.ajax({
@@ -108,6 +114,8 @@ function currentWeater(city) {
     })
 }
 
+//loops through every eighth element of the 40 responses
+//creates the cards for five upcoming days appends them to their respective containers
 function createFiveDay(response) {
     console.log(response);
 
