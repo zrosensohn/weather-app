@@ -18,9 +18,9 @@
         </header><!--End Main-->
 
         <main class="flex-grow-1 mt-3"><!--Must be set to grow 1 to fill space between header and push footer to bottom-->
-            <div class="container d-flex h-100">
+            <div class="container d-flex flex-lg-row flex-column h-100">
                 
-                <aside class="w-25 bg-light p-3">
+                <aside class="bg-light p-3">
                     <h5>Search for a City:</h5>
                     
                     <div class="input-group mb-2 mr-sm-2">
@@ -31,10 +31,12 @@
                     <ul class="list-group" id="cities">
                     </ul>
 
+                    <button id="clear" class="btn btn-danger mt-3">Clear</button>
+
 
                 </aside> <!--End Aside-->
                     
-                <div class="w-75 px-3 pb-3">
+                <div class="weather-container px-3 pb-3">
                     <div id="currentWeaterCard">
                         <div class="card-body">
                             <h3 id="selectedCity"></h3>

@@ -24,3 +24,18 @@ footer {
     color: #365577;
     font-weight: lighter;
 }
+
+aside {
+    width: 25%;
+}
+
+.weather-container {
+    width: 75%;
+}
+
+@media only screen and (max-width: 992px) {
+    aside, .weather-container, #fiveDay {
+        width: 100%;
+        flex-direction: column!important;
+    }
+}

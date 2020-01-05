@@ -161,3 +161,10 @@ $("#cities").on("click", "li", function(e){
     let city = $(this).attr("id");
     runAJAX(city);
 })
+
+$("#clear").on("click", (e)=>{
+    e.preventDefault();
+    cityArr=[];
+    pushToStorage();
+    $("#cities").empty();
+})
